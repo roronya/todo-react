@@ -5,6 +5,7 @@ export const PROGRESS_DOING = "DOING";
 export const PROGRESS_DONE = "DONE";
 
 const TodoRecord = Immutable.Record({
+  id: undefined,
   progress: PROGRESS_TODO,
   body: ""
 });

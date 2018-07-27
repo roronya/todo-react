@@ -26,11 +26,28 @@ import TodoModel from "../models/Todo";
 import * as TODO from "../models/Todo";
 import Todo from "../components/atoms/Todo";
 import TodoForm from "../components/molecules/TodoForm";
+import TodoList from "../components/molecules/TodoList";
 
 const todo = new TodoModel({
+  id: 0,
   progress: TODO.PROGRESS_TODO,
   body: "洗い物"
 });
 
+const todo0 = todo;
+const todo1 = new TodoModel({
+  id: 1,
+  progress: TODO.PROGRESS_DOING,
+  body: "プログラミング"
+});
+const todo2 = new TodoModel({
+  id: 2,
+  progress: TODO.PROGRESS_DONE,
+  body: "ミーテイング"
+});
+
 storiesOf("Todo", module).add("洗い物", () => <Todo todo={todo} />);
 storiesOf("TodoForm", module).add("default", () => <TodoForm />);
+storiesOf("TodoList", module).add("default", () => (
+  <TodoList todos={[todo0, todo1, todo2]} />
+));
