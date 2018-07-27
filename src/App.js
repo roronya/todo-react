@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import CSSBaseline from "@material-ui/core/CssBaseline";
-// import IndexPage from "./containers/IndexPage";
+import IndexPage from "./containers/IndexPage";
 
 class App extends Component {
   render() {
@@ -11,9 +11,7 @@ class App extends Component {
         <div className="App">
           <div>
             <Switch>
-              {/**
-               <Route exact path="/" component={IndexPage} />
-               **/}
+              <Route exact path="/" component={IndexPage} />
             </Switch>
           </div>
         </div>

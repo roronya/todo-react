@@ -25,10 +25,12 @@ storiesOf("Button", module)
 import TodoModel from "../models/Todo";
 import * as TODO from "../models/Todo";
 import Todo from "../components/atoms/Todo";
+import TodoForm from "../components/molecules/TodoForm";
 
 const todo = new TodoModel({
   progress: TODO.PROGRESS_TODO,
   body: "洗い物"
 });
 
-storiesOf("TODO", module).add("洗い物", () => <Todo todo={todo} />);
+storiesOf("Todo", module).add("洗い物", () => <Todo todo={todo} />);
+storiesOf("TodoForm", module).add("default", () => <TodoForm />);
