@@ -1,7 +1,7 @@
 import axios from "axios";
 import { normalize } from "normalizr";
 import * as schema from "../schema";
-import * as actionType from "../actionType"
+import * as actionType from "../actionType";
 
 const ADD_TODO = "ADD_TODO";
 
@@ -49,8 +49,9 @@ const initialState = [];
 export default (state = initialState, action) => {
   switch (action.type) {
     case ADD_TODO:
-      const todo = action.payload.todo.set("id", state.length);
-      return [...state, todo];
+      const todo = action.payload.todo.set("id", Object.keys(state).length);
+      const normalized = normalize(todo.toJS(), schema.todo).entities.todos;
+      return { ...state, ...normalized};
     default:
       return state;
   }
