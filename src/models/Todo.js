@@ -7,7 +7,8 @@ export const PROGRESS_DONE = "DONE";
 const TodoRecord = Immutable.Record({
   id: undefined,
   progress: PROGRESS_TODO,
-  body: ""
+  body: "",
+  user: undefined
 });
 
 export default class Todo extends TodoRecord {}
