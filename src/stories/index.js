@@ -27,6 +27,7 @@ import * as TODO from "../models/Todo";
 import Todo from "../components/atoms/Todo";
 import TodoForm from "../components/molecules/TodoForm";
 import TodoList from "../components/molecules/TodoList";
+import TodoListAndForm from "../components/organisms/TodoListAndForm";
 
 const todo = new TodoModel({
   id: 0,
@@ -45,9 +46,11 @@ const todo2 = new TodoModel({
   progress: TODO.PROGRESS_DONE,
   body: "ミーテイング"
 });
+const todos = [todo0, todo1, todo2];
 
 storiesOf("Todo", module).add("洗い物", () => <Todo todo={todo} />);
 storiesOf("TodoForm", module).add("default", () => <TodoForm />);
-storiesOf("TodoList", module).add("default", () => (
-  <TodoList todos={[todo0, todo1, todo2]} />
+storiesOf("TodoList", module).add("default", () => <TodoList todos={todos} />);
+storiesOf("TodoListAndForm", module).add("defult", () => (
+  <TodoListAndForm todos={todos} />
 ));
