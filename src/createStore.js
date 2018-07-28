@@ -6,14 +6,14 @@ import {
 import logger from "redux-logger";
 import thunk from "redux-thunk";
 import { routerReducer, routerMiddleware } from "react-router-redux";
-import TodoListAndFormReducer from "./modules/TodoListAndForm";
+import todoReducer from "./modules/todo";
 
 export default function createStore(history) {
   return reduxCreateStore(
     combineReducers({
       // add reducer
       router: routerReducer,
-      TodoListAndForm: TodoListAndFormReducer
+      todo: todoReducer
     }),
     applyMiddleware(logger, thunk, routerMiddleware(history))
   );
