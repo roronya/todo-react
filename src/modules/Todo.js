@@ -1,4 +1,6 @@
 import axios from "axios";
+import { normalize } from "normalizr";
+import * as schema from "../schema";
 
 const ADD_TODO = "ADD_TODO";
 const START_REQUEST = "START_REQUEST";
@@ -49,6 +51,14 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case RECEIVE_DATA:
+      const response = action.payload.response;
+      const normalized = response.map(r => normalize(r, schema.todo));
+      console.log(normalized);
+      const t = normalized[0]
+      console.log(t)
+      console.log(t.entities.todo)
+      console.log(t.entities.user)
+      console.log(t.entities.todo[0])
       return { todos: [...action.payload.response] };
     case ADD_TODO:
       const todo = action.payload.todo.set("id", state.todos.length);
