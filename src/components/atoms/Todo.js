@@ -6,7 +6,7 @@ export default ({ todo }) => (
     <ul>
       <li>{todo.progress}</li>
       <li>{todo.body}</li>
-      <li>{todo.assignee}</li>
+      <li>{todo.assignee.name}</li>
     </ul>
   </ul>
 );
