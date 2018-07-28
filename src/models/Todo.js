@@ -1,14 +1,23 @@
 import Immutable from "immutable";
+import User from "../models/User";
 
 export const PROGRESS_TODO = "TODO";
 export const PROGRESS_DOING = "DOING";
 export const PROGRESS_DONE = "DONE";
 
-const TodoRecord = Immutable.Record({
+const initialParams = {
   id: undefined,
   progress: PROGRESS_TODO,
   body: "",
   assignee: undefined
-});
+};
 
-export default class Todo extends TodoRecord {}
+const TodoRecord = Immutable.Record(initialParams);
+
+export default class Todo extends TodoRecord {
+  constructor(val) {
+    const todo = super(val);
+    const assignee = new User({...todo.assignee})
+    return todo.set("assignee", assignee)
+  }
+}

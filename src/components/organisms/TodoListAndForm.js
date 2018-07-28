@@ -8,13 +8,12 @@ export default class TodoListAndForm extends React.Component {
   }
 
   render() {
-    return <p>hoge</p>;
-//    const { todos, users, handleSubmit } = this.props;
-//    return (
-//      <div>
-//        <TodoForm users={users} handleSubmit={handleSubmit} />
-//        <TodoList todos={todos} />
-//      </div>
-//    );
+    const { todos, users, handleSubmit } = this.props;
+    return (
+      <div>
+        <TodoForm users={users} handleSubmit={handleSubmit} />
+        <TodoList todos={todos} />
+      </div>
+    );
   }
 }
