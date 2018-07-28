@@ -34,19 +34,22 @@ import UserSelect from "../components/atoms/UserSelect";
 const todo = new TodoModel({
   id: 0,
   progress: TODO.PROGRESS_TODO,
-  body: "洗い物"
+  body: "洗い物",
+  assignee: "hoshimiya"
 });
 
 const todo0 = todo;
 const todo1 = new TodoModel({
   id: 1,
   progress: TODO.PROGRESS_DOING,
-  body: "プログラミング"
+  body: "プログラミング",
+  assignee: "kiriya"
 });
 const todo2 = new TodoModel({
   id: 2,
   progress: TODO.PROGRESS_DONE,
-  body: "ミーテイング"
+  body: "ミーテイング",
+  assignee: "shibuki"
 });
 const todos = [todo0, todo1, todo2];
 
@@ -65,10 +68,10 @@ const user2 = new UserModel({
 const users = [user0, user1, user2];
 
 storiesOf("Todo", module).add("洗い物", () => <Todo todo={todo} />);
-storiesOf("TodoForm", module).add("default", () => <TodoForm />);
+storiesOf("TodoForm", module).add("default", () => <TodoForm users={users} />);
 storiesOf("TodoList", module).add("default", () => <TodoList todos={todos} />);
 storiesOf("TodoListAndForm", module).add("defult", () => (
-  <TodoListAndForm todos={todos} />
+  <TodoListAndForm todos={todos} users={users} />
 ));
 storiesOf("UserSelect", module).add("default", () => (
   <UserSelect users={users} />
