@@ -74,5 +74,5 @@ storiesOf("TodoListAndForm", module).add("defult", () => (
   <TodoListAndForm todos={todos} users={users} />
 ));
 storiesOf("UserSelect", module).add("default", () => (
-  <UserSelect users={users} />
+  <UserSelect selected={user1} users={users} />
 ));

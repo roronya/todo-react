@@ -1,7 +1,7 @@
 import React from "react";
 
-export default ({ users, handleChange }) => (
-  <select onChange={handleChange}>
+export default ({ selected, users, handleChange }) => (
+  <select value={selected} onChange={handleChange}>
     {users.map(user => (
       <option key={user.id} value={user.id}>
         {user.name}
