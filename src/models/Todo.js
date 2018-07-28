@@ -14,10 +14,4 @@ const initialParams = {
 
 const TodoRecord = Immutable.Record(initialParams);
 
-export default class Todo extends TodoRecord {
-  constructor(val) {
-    const todo = super(val);
-    const assignee = new User({...todo.assignee})
-    return todo.set("assignee", assignee)
-  }
-}
+export default class Todo extends TodoRecord {}
