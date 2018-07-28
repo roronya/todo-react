@@ -4,6 +4,7 @@ import SubmitButton from "../atoms/SubmitButton";
 import UserSelect from "../atoms/UserSelect";
 import { withFormik } from "formik";
 import Todo from "../../models/Todo";
+import User from "../../models/User";
 
 const TodoForm = ({
   values,
@@ -19,7 +20,7 @@ const TodoForm = ({
     />
     <UserSelect
       selected={values.todo.assignee}
-      users={values.users}
+      users={props.users}
       handleChange={handleChange("todo.assignee")}
     />
     <SubmitButton onClick={handleSubmit}>Submit</SubmitButton>
@@ -29,7 +30,6 @@ const TodoForm = ({
 export default withFormik({
   mapPropsToValues: props => ({
     todo: new Todo().set("assignee", props.users[0]).toJS(),
-    users: props.users,
     handleSubmit: props.handleSubmit
   }),
   handleSubmit: values => {
