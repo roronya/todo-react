@@ -2,9 +2,9 @@ import React from "react";
 import TodoList from "../molecules/TodoList";
 import TodoForm from "../molecules/TodoForm";
 
-export default ({ todos }) => (
+export default ({ todos, handleSubmit }) => (
   <div>
-    <TodoForm />
+    <TodoForm handleSubmit={handleSubmit} />
     <TodoList todos={todos} />
   </div>
 );
