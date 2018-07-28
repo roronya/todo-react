@@ -1,0 +1,27 @@
+{
+  "users": [
+    { "id": 0, "name": "hoshimiya" },
+    { "id": 1, "name": "kiriya" },
+    { "id": 2, "name": "shibuki" }
+  ],
+  "todos": [
+    {
+      "id": 0,
+      "progress": "TODO",
+      "body": "洗い物",
+      "assignee": { "id": 0, "name": "hoshimiya" }
+    },
+    {
+      "id": 1,
+      "progress": "DOING",
+      "body": "プログラミング",
+      "assignee": { "id": 1, "name": "kiriya" }
+    },
+    {
+      "id": 2,
+      "progress": "DONE",
+      "body": "ミーティング",
+      "assignee": { "id": 2, "name": "shibuki" }
+    }
+  ]
+}
