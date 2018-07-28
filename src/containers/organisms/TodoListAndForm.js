@@ -11,6 +11,9 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = dispatch => ({
   handleSubmit(todo) {
     dispatch(todoModule.addTodo(todo));
+  },
+  onMount() {
+    dispatch(todoModule.fetchTodos());
   }
 });
 
