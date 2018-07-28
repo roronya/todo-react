@@ -28,7 +28,8 @@ const TodoForm = ({
 
 export default withFormik({
   mapPropsToValues: props => ({
-    todo: new Todo().set("assignee", props.users[0]).toJS(),
+    //todo: new Todo().set("assignee", props.users[0]).toJS(),
+    todo: new Todo(),
     users: props.users,
     handleSubmit: props.handleSubmit
   }),

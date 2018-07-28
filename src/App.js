@@ -11,7 +11,7 @@ class App extends Component {
         <div className="App">
           <div>
             <Switch>
-              <Route exact path="/" component={TodoListAndForm} />
+               <Route exact path="/" component={TodoListAndForm} />
             </Switch>
           </div>
         </div>

@@ -2,11 +2,10 @@ import React from "react";
 import { connect } from "react-redux";
 import TodoListAndForm from "../../components/organisms/TodoListAndForm";
 import * as todoModule from "../../modules/Todo";
+import { denormalize } from "normalizr";
+import * as schema from "../../schema";
 
-const mapStateToProps = (state, ownProps) => ({
-  todos: state.todo.todos,
-  users: state.user.users
-});
+const mapStateToProps = (state, ownProps) => ({});
 
 const mapDispatchToProps = dispatch => ({
   handleSubmit(todo) {

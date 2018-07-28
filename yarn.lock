@@ -988,7 +988,7 @@ babel-plugin-minify-builtins@^0.3.0:
 
 babel-plugin-minify-constant-folding@^0.3.0:
   version "0.3.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-minify-constant-folding/-/babel-plugin-minify-constant-folding-0.3.0.tgz#687e40336bd4ddd921e0e197f0006235ac184bb9"
+  resolved "https://registry.yarnpkg.com/babel-plugin-minify-actionType-folding/-/babel-plugin-minify-actionType-folding-0.3.0.tgz#687e40336bd4ddd921e0e197f0006235ac184bb9"
   dependencies:
     babel-helper-evaluate-path "^0.3.0"
 
@@ -1387,7 +1387,7 @@ babel-plugin-transform-property-literals@^6.9.0:
 
 babel-plugin-transform-react-constant-elements@6.23.0:
   version "6.23.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-constant-elements/-/babel-plugin-transform-react-constant-elements-6.23.0.tgz#2f119bf4d2cdd45eb9baaae574053c604f6147dd"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-actionType-elements/-/babel-plugin-transform-react-actionType-elements-6.23.0.tgz#2f119bf4d2cdd45eb9baaae574053c604f6147dd"
   dependencies:
     babel-runtime "^6.22.0"
 
@@ -1551,7 +1551,7 @@ babel-preset-minify@^0.3.0:
   resolved "https://registry.yarnpkg.com/babel-preset-minify/-/babel-preset-minify-0.3.0.tgz#7db64afa75f16f6e06c0aa5f25195f6f36784d77"
   dependencies:
     babel-plugin-minify-builtins "^0.3.0"
-    babel-plugin-minify-constant-folding "^0.3.0"
+    babel-plugin-minify-actionType-folding "^0.3.0"
     babel-plugin-minify-dead-code-elimination "^0.3.0"
     babel-plugin-minify-flip-comparisons "^0.3.0"
     babel-plugin-minify-guarded-expressions "^0.3.0"
@@ -1583,7 +1583,7 @@ babel-preset-react-app@^3.1.1:
     babel-plugin-transform-class-properties "6.24.1"
     babel-plugin-transform-es2015-destructuring "6.23.0"
     babel-plugin-transform-object-rest-spread "6.26.0"
-    babel-plugin-transform-react-constant-elements "6.23.0"
+    babel-plugin-transform-react-actionType-elements "6.23.0"
     babel-plugin-transform-react-jsx "6.24.1"
     babel-plugin-transform-react-jsx-self "6.22.0"
     babel-plugin-transform-react-jsx-source "6.22.0"
