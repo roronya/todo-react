@@ -51,15 +51,7 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case RECEIVE_DATA:
-      const response = action.payload.response;
-      const normalized = response.map(r => normalize(r, schema.todo));
-      console.log(normalized);
-      const t = normalized[0]
-      console.log(t)
-      console.log(t.entities.todo)
-      console.log(t.entities.user)
-      console.log(t.entities.todo[0])
-      return { todos: [...action.payload.response] };
+      return normalize(action.payload.response, [schema.todo]);
     case ADD_TODO:
       const todo = action.payload.todo.set("id", state.todos.length);
       return { todos: [...state.todos, todo] };
